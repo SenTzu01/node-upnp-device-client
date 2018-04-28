@@ -459,7 +459,7 @@ function parseDeviceDescription(xml, url) {
     ]);
   });
 
-  var nodes = doc.findall('./device/serviceList/service');
+  var nodes = doc.findall('./device//dlna:X_DLNADOC/../serviceList/service');
   desc.services = {};
   nodes.forEach(function(service) {
     var tmp = extractFields(service, [
